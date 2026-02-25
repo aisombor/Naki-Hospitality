@@ -1,0 +1,710 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+.main-logo {
+    background: url('../images/main_logo.png') center/cover;
+    
+    width: 150px; 
+    height: 66px;
+    display: inline-block;
+}
+
+:root {
+  --navy: #002b52;
+  --navy-light: #1a3a5c;
+  --gold: #c9a96e;
+  --text: #3d3c3c;
+  --text-light: #a9a9aa;
+  --bg-light: #f5f5f5;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: century gothic, sans-serif;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* NAV */
+nav {
+  position: sticky; top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  display: flex; align-items: center; justify-content: center;
+  padding: 12px 40px;
+  gap: 60px;
+  transition: transform 0.3s ease-in-out;
+}
+/* Class សម្រាប់លាក់ Header ពេល Scroll ចុះក្រោម */
+.nav-hidden {
+  transform: translateY(-100%);
+}
+.nav-logo {
+  display: flex; flex-direction: column; align-items: center;
+  text-decoration: none; color: var(--navy);
+}
+.nav-logo-n {
+  font-family: century gothic, sans-serif;
+  font-size: 28px; font-weight: 600;
+  border: 2px solid var(--navy);
+  width: 42px; height: 42px;
+  display: flex; align-items: center; justify-content: center;
+
+}
+.nav-logo-text { font-size: 8px; letter-spacing: 3px; margin-top: 2px; }
+.nav-links { 
+  display: flex; 
+  gap: 40px; list-style: none;
+  padding-left: 300px;
+}
+.nav-links a {
+  text-decoration: none; color: var(--text);
+  font-size: 15px; font-weight: 600;
+  text-transform: uppercase;
+  transition: color .2s;
+  font-family: century gothic, sans-serif;
+}
+.nav-links a:hover { color: var(--navy); }
+
+/* HERO ANIMATION HOME PAGE */
+.hero {
+  margin-top: 0; 
+  min-height: 470px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr; /* បែងចែកជា ២ចំណែក */
+  background-color: #d1dbe4; /* ពណ៌ផ្ទៃខាងក្រោយផ្នែកអត្ថបទ */
+  overflow: hidden;
+}
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 60px;
+  /* បន្ថែមចលនារុញចូលពីខាងឆ្វេង */
+  animation: slideInLeft 1.2s ease-out both;
+}
+.hero-heading {
+  font-family: century gothic, sans-serif;
+  font-size: 52px; font-weight: 600;
+  color: var(--navy);
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.hero-img {
+  background: url('../images/slide.jpg') center/cover no-repeat;
+  width: 100%;
+  height: 100%;
+  /* បន្ថែមចលនា Fade In ឱ្យរូបភាព */
+  animation: fadeInRight 1.8s ease-in both;
+  /* ធ្វើឱ្យគែមរូបភាពរលាយចូលគ្នាជាមួយពណ៌ផ្ទៃខាងក្រោយ */
+  mask-image: linear-gradient(to left, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to left, black 85%, transparent);
+}
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* SECTIONS */
+section { padding: 80px 40px; }
+
+.welcome {
+  text-align: center;
+  max-width: 800px; margin: 0 auto;
+  padding: 45px 40px;
+}
+.section-label {
+  font-family: century gothic, sans-serif;
+  font-size: 32px; font-weight: 400;
+  color: var(--text-light); margin-bottom: 20px;
+}
+.section-title {
+  font-family: century gothic, sans-serif;
+  font-size: 32px; font-weight: 400;
+  color: var(--navy); margin-bottom: 20px;
+}
+.section-title strong { font-weight: 600; }
+.section-body { 
+  color: var(--text);
+  line-height: 1.8;
+  font-family: century gothic, sans-serif;
+  font-size: 15px;
+  max-width: 100%;
+  text-align: center;
+  font-weight: 300;
+ }
+
+/* PROPERTIES ///////////////////////////////////////////////////////////////////////////////*/
+.properties-section {
+  background: var(--bg-light);
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0; min-height: 470px;
+}
+.properties-content {
+  padding: 30px 150px;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.properties-content h3 {
+  font-family: century gothic, sans-serif;
+  font-size: 28px; font-weight: 500;
+  text-transform: uppercase;
+  color: var(--navy); margin-bottom: 16px;
+}
+.properties-content p { 
+  color: var(--text); 
+  font-size: 15px; 
+  margin-bottom: 24px;
+  font-weight: 300;
+  max-width: 600px;
+ }
+.learn-more {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: var(--navy); font-size: 15px; letter-spacing: 2px;
+  text-transform: uppercase; text-decoration: none; font-weight: 900;
+  transition: gap .2s;
+  font-family: century gothic, sans-serif;
+}
+.learn-more:hover { gap: 14px; }
+.learn-more::after { content: '→'; }
+.properties-img {
+  background: url('../images/nakisuite.jpg') center/cover;
+  display: flex; align-items: flex-end; justify-content: flex-end; padding: 30px;
+}
+.suite-badge {
+  background: rgba(255,255,255,.15); backdrop-filter: blur(10px);
+  color: #fff; padding: 16px 24px; text-align: right;
+  border: 1px solid rgba(255,255,255,.3);
+}
+.suite-badge .suite-s {
+  font-family: century gothic, sans-serif;
+  font-size: 48px; display: block; line-height: 1;
+}
+.suite-badge .suite-name { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; }
+
+/* ABOUT PAGE ///////////////////////////////////////////////////////////////////////////////*/
+.page-header { padding: 80px 200px 40px; }
+.page-label {
+  font-size: 28px; letter-spacing: 4px; text-transform: uppercase;
+  color: var(--text-light);
+}
+.page-title {
+  font-family: century gothic, sans-serif;
+  font-size: 32px; font-weight: 700; color: var(--navy);
+   text-transform: uppercase;
+}
+
+.about-content { padding: 20px 200px 60px; }
+.about-content h4 {
+  font-size: 21px; letter-spacing: 1px; text-transform: uppercase;
+  color: var(--navy); margin-bottom: 20px;
+  font-weight: 500;
+  font-family: century gothic, sans-serif;
+}
+.about-content p { 
+  color: var(--text); 
+  font-size: 15px; 
+  margin-bottom: 14px; 
+  max-width: 100%; 
+  font-weight: 300;
+  padding-top: 15px;
+  font-family: century gothic, sans-serif;
+  
+}
+
+.brand-section { padding: 40px 200px 80px; }
+.brand-section h4 {
+  font-size: 21px; letter-spacing: 1px; text-transform: uppercase;
+  color: var(--navy); margin-bottom: 20px;
+  font-weight: 500;
+  font-family: century gothic, sans-serif;
+}
+.brand-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;
+}
+.brand-card { text-align: center; }
+.brand-card-img {
+  width: 100%; height: 220px; object-fit: cover; margin-bottom: 16px;
+}
+.brand-card h5 { font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+.brand-card p { font-size: 15px; color: var(--text-light); }
+.brand-card-logo { margin-top: 16px; height: 40px; }
+
+/* Mini Logo About Page*/
+.brand-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ធ្វើឱ្យ content ទាំងអស់នៅចំកណ្តាល */
+  text-align: center;
+  
+}
+/*width:320px;position:relative; left:50%; margin-left:-160px;*/
+.brand-card-img {
+  width: 320px;
+  height: 400px; /* ប្តូរពី 220px ទៅ 300px ដើម្បីឱ្យរាងបញ្ឈរដូចរូបភាពទី ១ */
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.brand-card h5 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--navy); /* ពណ៌ Navy */
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  font-family: century gothic, sans-serif;
+
+}
+
+.brand-card p {
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.5;
+  margin-bottom: 20px;
+  max-width: 250px; /* កំណត់ប្រវែងអត្ថបទឱ្យធ្លាក់បន្ទាត់ដូចក្នុងរូប */
+  font-family: century gothic, sans-serif;
+}
+
+.brand-card-logo {
+  height: 117px; /* កំណត់កម្ពស់ឡូហ្គោ */
+  width: 124px;
+  object-fit: contain;
+  margin-top: 10px;
+}
+/* NAKI LIFE ///////////////////////////////////////////////////////////////////////////////*/
+.value-section {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 60px; padding: 20px 200px 60px; align-items: start;
+}
+.value-section h4 {
+  font-size: 21px; letter-spacing: 1px; text-transform: uppercase;
+  color: var(--navy); margin-bottom: 20px;
+  font-weight: 500;
+  font-family: century gothic, sans-serif;
+}
+.value-item { margin-bottom: 30px; }
+.value-item h6 { 
+  font-size: 15px; letter-spacing: 1px;
+  color: var(--navy);
+  font-weight: 550;
+  font-family: century gothic, sans-serif; }
+.value-item p { 
+  font-size: 15px; 
+  color: var(--text); 
+  font-family: century gothic, sans-serif;
+}
+.value-img-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+.value-img-grid img { width: 100%; height: 430px; object-fit: cover; }
+
+.persona-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+  padding: 0 200px 80px;
+  margin-top: 60px;
+  font-family: century gothic, sans-serif;
+}
+.persona-card { text-align: center; }
+.persona-card img { width: 100%; height: 350px; object-fit: cover; margin-bottom: 15px; }
+.persona-card h5 { font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+.persona-card p { font-size: 15px; color: var(--text); }
+
+/* CONTACT ///////////////////////////////////////////////////////////////////////////////*/
+.contact-map {
+  width: 100%; height: 450px;
+  border: none;
+  display: block;
+}
+.contact-body {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-bottom: 150px;
+  align-items: start;
+  font-family: century gothic, sans-serif;
+}
+.contact-info h4 {
+  font-size: 22px; letter-spacing: 1px; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  
+}
+
+.contact-info p { font-size: 15px; color: var(--text);font-weight: 300; font-family: century gothic, sans-serif;}
+.contact-info p span { font-size: 18px;color: var(--navy); font-weight: 300; font-family: century gothic, sans-serif;}
+.contact-form h4 {
+  font-size: 22px; letter-spacing: 1px; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 20px;
+  font-weight: 500;
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;width: 600px; }
+.contact-form input,
+.contact-form textarea {
+  width: 100%; border: none; padding: 10px 14px;
+  font-family: century gothic, sans-serif; font-size: 15px;
+  outline: none; transition: border-color .2s;
+  background: #efefef;
+}
+.contact-form input:focus,
+.contact-form textarea:focus { border-color: var(--navy); }
+.contact-form textarea { height: 120px; resize: vertical; margin-bottom: 16px; }
+.btn-send {
+  background: var(--text-light); color: #fff;
+  border: none; padding: 12px 32px;
+  font-family: century gothic, sans-serif;
+  font-size: 15px; letter-spacing: 1px; text-transform: uppercase;
+  cursor: pointer; transition: background .2s;
+}
+.btn-send:hover { background: var(--navy-light); }
+
+/* FOOTER ///////////////////////////////////////////////////////////////////////////////*/
+footer {
+  background: var(--navy); color: rgba(255,255,255,.7);
+  padding: 50px 200px 30px;
+ 
+}
+.footer-grid {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px; margin-bottom: 40px;
+}
+.footer-col h5 {
+  font-size: 20px; text-transform: uppercase;
+  color: #c68e60; margin-bottom: 14px; font-weight: 900;
+}
+.footer-col p, .footer-col a {
+  font-size: 14px; color: #ffffff;
+  line-height: 20px; text-decoration: none;
+  transition: color .2s;
+  font-weight: 300;
+  font-family: century gothic, sans-serif;
+  padding: 3px 0;
+  display: block;
+}
+.footer-col a:hover { color: var(--gold); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.1);
+  padding-top: 20px;
+  display: flex; align-items: center; gap: 16px;
+}
+.footer-bottom-logo {
+  font-family: century gothic, sans-serif;
+  color: #d5cdcd; font-size: 21px;font-weight: bolder;
+}
+.footer-bottom-sub { font-size: 14px; color: #ffffff; font-weight: 300; }
+
+/* PAGE SYSTEM */
+.page { display: none; }
+.page.active { display: block; }
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity:0; transform: translateY(20px); }
+  to   { opacity:1; transform: translateY(0); }
+}
+.page.active .hero-heading,
+.page.active .welcome,
+.page.active .page-title { animation: fadeUp .7s ease both; }
+
+
+
+/* POP UP Chat ///////////////////////////////// */
+/* Container */
+.chat-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ប៊ូតុងមេ (រង្វង់ពណ៌ស្វាយ) */
+.chat-main-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--navy); /* ពណ៌ស្វាយស្រដៀងក្នុងរូប */
+    border: none;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    border: none;
+    color: white;
+    font-size: 0;    /* ← ថែម */
+    padding: 0;      /* ← ថែម */
+    cursor: pointer;
+}
+.chat-main-btn img {
+    width: 63px;
+    height: 63px;
+    object-fit: contain;
+    display: block;
+}
+
+.chat-main-btn:active { transform: scale(0.9); }
+
+/* លាក់សញ្ញា ខ្វែង ជាមុន */
+.chat-main-btn .icon-close { display: none; }
+
+/* រចនាប័ទ្មពេល Active (បើក) */
+.chat-container.active .icon-open { display: none; }
+.chat-container.active .icon-close { display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;  /* ← ត្រូវការ font-size ព្រោះ × ជា text */
+    color: white;
+    line-height: 1; }
+.chat-container.active .chat-options {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* បញ្ជីប៊ូតុងក្នុង Chat Options */
+.chat-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.chat-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.chat-icon img { width: 60%; height: 60%; }
+.chat-icon:hover { transform: scale(1.1); }
+
+/* ពណ៌តាម App នីមួយៗ */
+.insta { background: #168AFF }
+.messenger { background-color: #168AFF; }
+.whatsapp { background-color: #25d366; }
+
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+  /* NAV */
+  nav {
+    padding: 12px 20px;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .nav-links {
+    padding-left: 0;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .nav-links a { font-size: 12px; }
+
+  /* HERO */
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .hero-content {
+    padding: 40px 20px;
+    justify-content: center;
+    text-align: center;
+  }
+  .hero-heading { font-size: 28px; }
+  .hero-img {
+    height: 250px;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+
+  /* WELCOME */
+  .welcome { padding: 30px 20px; }
+  .section-title { font-size: 20px; }
+
+  /* PROPERTIES */
+  .properties-section {
+    grid-template-columns: 1fr;
+  }
+  .properties-content {
+    padding: 30px 20px;
+  }
+  .properties-img { height: 250px; }
+
+  /* ABOUT */
+  .page-header { padding: 40px 20px 20px; }
+  .about-content { padding: 20px 20px 40px; }
+  .brand-section { padding: 20px 20px 40px; }
+  .brand-grid { grid-template-columns: 1fr; }
+  .brand-card-img { width: 100%; height: 250px; }
+
+  /* NAKI LIFE */
+  .value-section {
+    grid-template-columns: 1fr;
+    padding: 20px 20px 40px;
+    gap: 30px;
+  }
+  .persona-grid {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 20px 40px;
+    gap: 15px;
+  }
+  .persona-card img { height: 200px; }
+
+  /* CONTACT */
+.contact-body {
+    grid-template-columns: 1fr;
+    padding: 30px 20px 60px;
+    gap: 40px;
+  }
+
+  /* Contact Title fix */
+  #page-contact > div[style] {
+    padding: 40px 20px 20px !important;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .contact-map { height: 250px; }
+
+  /* FOOTER */
+  footer { padding: 40px 20px 20px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+
+  /* CHAT */
+  .chat-container { bottom: 20px; right: 20px; }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  nav { padding: 12px 20px; gap: 20px; }
+  .nav-links { padding-left: 0; gap: 20px; }
+  .hero-heading { font-size: 38px; }
+  .properties-content { padding: 30px 40px; }
+  .page-header { padding: 60px 60px 30px; }
+  .about-content { padding: 20px 60px 40px; }
+  .brand-section { padding: 20px 60px 60px; }
+  .value-section { padding: 20px 60px 40px; }
+  .persona-grid { padding: 0 60px 60px; }
+  .contact-body { padding: 30px 60px 80px; }
+  footer { padding: 40px 60px 20px; }
+}
+
+/* ===== SCROLL ANIMATIONS ===== */
+
+/* Hidden state - elements start invisible */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+/* Visible state - triggered by JS */
+.fade-up.visible,
+.fade-left.visible,
+.fade-right.visible {
+  opacity: 1;
+  transform: translate(0);
+}
+
+/* Delay classes for staggered effect */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+
+/* ===== HAMBURGER MENU ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 200;
+}
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: var(--navy);
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+/* Animate to X when open */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile Nav */
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;
+    background: #fff;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    z-index: 150;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+}

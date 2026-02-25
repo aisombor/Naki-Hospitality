@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naki Hospitality</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<!-- ✅ CSS ដាច់ដោយឡែក -->
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="#" onclick="showPage('home')">
+    <!-- <div class="nav-logo-n">A</div> -->
+    <div class="main-logo"></div>
+    <!--<span class="nav-logo-text">NAKI HOSPITALITY</span> -->
+  </a>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="#" onclick="showPage('about')">ABOUT US</a></li>
+    <li><a href="#" onclick="showPage('nakilife')">NAKI LIFE</a></li>
+    <li><a href="https://nakisuites.com/" target="_blank">OUR PROPERTIES</a></li>
+    <li><a href="#" onclick="showPage('contact')">CONTACT US</a></li>
+  </ul>
+</nav>
+
+<!-- HOME PAGE -->
+<div id="page-home" class="page active">
+  <div class="hero">
+    <div class="hero-content">
+      <h1 class="hero-heading">ENJOY YOUR <br> STAY WITH US</h1>
+    </div>
+    <div class="hero-img"></div>
+  </div>
+
+  <div class="welcome fade-up">
+    <!-- <p class="section-label">Welcome To</p>-->
+    <h2 class="section-title"><span class="section-label">WELCOME TO</span> NAKI HOSPITALITY</h2>
+    <p class="section-body">NAKI Hospitality aims to offers a high quality standard of stay to our clients. From long stay to short stay, we ensure world class accommodation coupled with services of convenience.</p>
+  </div>
+
+  <div class="properties-section">
+    <div class="properties-content fade-left">
+      <h3>Our Properties</h3>
+      <p>Naki Suites @ Silvertown is located in the heart of Phnom Penh's most stylish and young residential quarter, surrounded by a wide selection of restaurants, trendy bars and cultural attractions.</p>
+      <a class="learn-more" href="https://nakisuites.com/" target="_blank">Learn More</a>
+    </div>
+    <div class="properties-img fade-right">
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h5>Our Location</h5>
+        <p>National Assembly Road,<br>Phnom Penh, Cambodia</p>
+        <p>Tel: 023-900-959</p>
+        <p>Email: info@nakihospitality.com</p>
+      </div>
+      <div class="footer-col">
+        <h5>Main Menu</h5>
+        <a href="#" onclick="showPage('home')">HOME</a>
+        <a href="#" onclick="showPage('about')">ABOUT US</a>
+        <a href="https://nakisuites.com/" target="_blank">OUR PROPERTIES</a>
+        <a href="#" onclick="showPage('contact')">CONTACT US</a>
+      </div>
+      <div class="footer-col">
+        <h5>Our Properties</h5>
+        <a href="https://nakisuites.com/" target="_blank">NAKI SUITES @ SILVERTOWN</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-bottom-logo">NAKI HOSPITALITY</span>
+      <span class="footer-bottom-sub">A NAKI GROUP COMPANY — Copyright © 2024.</span>
+    </div>
+  </footer>
+</div>
+
+<!-- ABOUT PAGE -->
+<div id="page-about" class="page">
+  <!--<div style="height:72px"></div>-->
+  <div class="page-header">
+    <p class="page-label">About</p>
+    <h1 class="page-title">Naki Group</h1>
+  </div>
+  <div class="about-content">
+    <h4>Who We Are</h4>
+    <p>Rooted from Cambodia, the Pearl of Asia, Naki Group has grown from a local real estate and property management firm into an investment firm focused on developing the Indo-China belt through sustainable investments into property, property related as well as service based businesses.</p>
+    <p>Our team includes dedicated professionals who truly cares about the markets that we influence. Naki has grown significantly over the decade and aims to be the one-stop-shop for business and investment opportunities within Cambodia and the Indo-China belt. We bring a wealth of experience into the market to create modern and innovative solutions to the real estate market.</p>
+    <p>At our core, Naki Group is a dynamic team that holds the integrity of our people as a core value.</p>
+    <p>We treasure the relationships nurtured with our clients and working partners and we take pride in our ability to create economically sound investments and proprietary opportunities for our partners and investors.</p>
+    <p>We respect heritage. We envision the future.</p>
+  </div>
+
+  <div class="brand-section">
+  <h4>Naki Hospitality Brand</h4>
+  <div class="brand-grid">
+    <div class="brand-card fade-up delay-1">
+      <img class="brand-card-img" src='assets/images/nakicollection.jpg' alt="Naki Collection">
+      <h5>Naki Collection</h5>
+      <p>Enjoy our finest lifestyle hotels. Embrace the local vibe.</p>
+      <img class="brand-card-logo" src="assets/images/minilogoabout.jpg" alt="Collection Logo">
+    </div>
+
+    <div class="brand-card fade-up delay-2">
+      <img class="brand-card-img" src="assets/images/nakisuites.jpg" alt="Naki Suites">
+      <h5>Naki Suites</h5>
+      <p>Upscale, stylish suites for serviced residence.</p>
+      <img class="brand-card-logo" src="assets/images/minilogoabout2.png" alt="Suites Logo">
+    </div>
+
+    <div class="brand-card fade-up delay-3">
+      <img class="brand-card-img" src="assets/images/nakiclub.jpg" alt="Naki Club">
+      <h5>Naki Club</h5>
+      <p>Stylish designed units in residential estates. Enrich your life.</p>
+      </div>
+  </div>
+</div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h5>Our Location</h5>
+        <p>National Assembly Road,<br>Phnom Penh, Cambodia</p>
+        <p>Tel: 023-900-959</p>
+        <p>Email: info@nakihospitality.com</p>
+      </div>
+      <div class="footer-col">
+        <h5>Main Menu</h5>
+        <a href="#" onclick="showPage('home')">HOME</a>
+        <a href="#" onclick="showPage('about')">ABOUT US</a>
+        <a href="https://nakisuites.com/" target="_blank">OUR PROPERTIES</a>
+        <a href="#" onclick="showPage('contact')">CONTACT US</a>
+      </div>
+      <div class="footer-col">
+        <h5>Our Properties</h5>
+        <a href="https://nakisuites.com/" target="_blank">NAKI SUITES @ SILVERTOWN</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-bottom-logo">NAKI HOSPITALITY</span>
+      <span class="footer-bottom-sub">A NAKI GROUP COMPANY — Copyright © 2024.</span>
+    </div>
+  </footer>
+</div>
+
+<!-- NAKI LIFE PAGE -->
+<div id="page-nakilife" class="page">
+  <!--<div style="height:72px"></div>-->
+  <div class="page-header">
+    <p class="page-label">About</p>
+    <h1 class="page-title">Naki Life</h1>
+  </div>
+
+  <div class="value-section">
+    <div class="fade-left">
+      <h4>Value For Partners</h4>
+      <div class="value-item">
+        <h6>Development</h6>
+        <p>Leverage on in-house expertise and external consultants to create the impactful property. Develop unique concepts and optimize space planning.</p>
+      </div>
+      <div class="value-item">
+        <h6>Operations</h6>
+        <p>Strong local knowledge create efficiencies. Vast sales and marketing network to boost outreach.</p>
+      </div>
+      <div class="value-item">
+        <h6>Capital Management</h6>
+        <p>Our journey together extends to the entire property cycle, working with our partners for potential divestment.</p>
+      </div>
+    </div>
+    <div class="value-img-grid fade-right">
+      <img src="assets/images/nakilife.jpg" alt="nakilife">
+      
+    </div>
+  </div>
+
+  <div class="persona-grid">
+    <div class="persona-card fade-up delay-1">
+      <img src="assets/images/Professional.jpg" alt="The Professional">
+      <h5>The Professional</h5>
+      <p>Looking for quality and practicality</p>
+    </div>
+    <div class="persona-card fade-up delay-2">
+      <img src="assets/images/Explorer.jpg" alt="The Explorer">
+      <h5>The Explorer</h5>
+      <p>Experience the local community</p>
+    </div>
+    <div class="persona-card fade-up delay-3">
+      <img src="assets/images/Happening.jpg" alt="The Happening">
+      <h5>The Happening</h5>
+      <p>Enjoy the buzz and crowd</p>
+    </div>
+    <div class="persona-card fade-up delay-4">
+      <img src="assets/images/stylish.jpg" alt="The Stylish">
+      <h5>The Stylish</h5>
+      <p>Seek out new interior design concepts</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h5>Our Location</h5>
+        <p>National Assembly Road,<br>Phnom Penh, Cambodia</p>
+        <p>Tel: 023-900-959</p>
+        <p>Email: info@nakihospitality.com</p>
+      </div>
+      <div class="footer-col">
+        <h5>Main Menu</h5>
+        <a href="#" onclick="showPage('home')">HOME</a>
+        <a href="#" onclick="showPage('about')">ABOUT US</a>
+        <a href="https://nakisuites.com/" target="_blank">OUR PROPERTIES</a>
+        <a href="#" onclick="showPage('contact')">CONTACT US</a>
+      </div>
+      <div class="footer-col">
+        <h5>Our Properties</h5>
+        <a href="https://nakisuites.com/" target="_blank">NAKI SUITES @ SILVERTOWN</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-bottom-logo">NAKI HOSPITALITY</span>
+      <span class="footer-bottom-sub">A NAKI GROUP COMPANY — Copyright © 2024.</span>
+    </div>
+  </footer>
+</div>
+
+<!-- PROPERTIES PAGE -->
+<div id="page-properties" class="page">
+  <div style="height:72px"></div>
+  <div class="page-header">
+    <p class="page-label">Our</p>
+    <h1 class="page-title">Properties</h1>
+  </div>
+  <div style="padding: 20px 200px 80px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;">
+      <div>
+        <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80" alt="Naki Suites" style="width:100%;height:320px;object-fit:cover;">
+      </div>
+      <div style="display:flex;flex-direction:column;justify-content:center;padding:20px;">
+        <p style="font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">Silvertown</p>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:var(--navy);margin-bottom:16px;text-transform:uppercase;">Naki Suites</h2>
+        <p style="color:var(--text-light);font-size:13px;margin-bottom:24px;line-height:1.8;">Naki Suites @ Silvertown is located in the heart of Phnom Penh's most stylish and young residential quarter, surrounded by a wide selection of restaurants, trendy bars and cultural attractions. Enjoy upscale, fully-furnished suites designed for both short and long-term serviced residence.</p>
+        <a href="#" style="display:inline-flex;align-items:center;gap:8px;color:var(--navy);font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;font-weight:500;">Enquire Now →</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h5>Our Location</h5>
+        <p>National Assembly Road,<br>Phnom Penh, Cambodia</p>
+        <p>Tel: 023-900-959</p>
+        <p>Email: info@nakihospitality.com</p>
+      </div>
+      <div class="footer-col">
+        <h5>Main Menu</h5>
+        <a href="#" onclick="showPage('home')">HOME</a>
+        <a href="#" onclick="showPage('about')">ABOUT US</a>
+        <a href="https://nakisuites.com/" target="_blank">OUR PROPERTIES</a>
+        <a href="#" onclick="showPage('contact')">CONTACT US</a>
+      </div>
+      <div class="footer-col">
+        <h5>Our Properties</h5>
+        <a href="https://nakisuites.com/" target="_blank">NAKI SUITES @ SILVERTOWN</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-bottom-logo">NAKI HOSPITALITY</span>
+      <span class="footer-bottom-sub">A NAKI GROUP COMPANY — Copyright © 2024.</span>
+    </div>
+  </footer>
+</div>
+
+<!-- CONTACT PAGE -->
+<div id="page-contact" class="page">
+  <!-- <div style="height:72px"></div> -->
+  <iframe
+    class="contact-map"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62556.29!2d104.9282!3d11.5564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109513d18196f45%3A0xb2b36f069c3cc8ac!2sPhnom%20Penh%2C%20Cambodia!5e0!3m2!1sen!2s!4v1"
+    allowfullscreen="" loading="lazy">
+  </iframe>
+
+  <div style="padding:200px 30px 60px 200px;">
+    <h1 style="font-family:'century gothic', sans-serif;font-size:42px;font-weight:700;color:var(--navy);letter-spacing:1px;text-transform:uppercase;line-height: 24px;">Contact Us</h1>
+  </div>
+
+  <div class="contact-body">
+    <div class="contact-info">
+      <h4>Cambodia</h4>
+      <p>National Assembly Road,<br>Phnom Penh, Cambodia.</p>
+      <br>
+      <p><span>Tel:</span> 023-900-959</p>
+      <p><span>Email:</span> info@nakihospitality.com</p>
+    </div>
+    <div class="contact-form">
+      <h4>Get In Touch</h4>
+      <div class="form-row">
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+      </div>
+      <input type="tel" placeholder="Phone Number" style="width:100%;margin-bottom:12px;border:none;padding:10px 14px;font-family:'century gothic',sans-serif;font-size:15px;outline:none;background:#efefef;">
+      <textarea placeholder="Message"></textarea>
+      <button class="btn-send">Send</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h5>Our Location</h5>
+        <p>National Assembly Road,<br>Phnom Penh, Cambodia</p>
+        <p>Tel: 023-900-959</p>
+        <p>Email: info@nakihospitality.com</p>
+      </div>
+      <div class="footer-col">
+        <h5>Main Menu</h5>
+        <a href="#" onclick="showPage('home')">HOME</a>
+        <a href="#" onclick="showPage('about')">ABOUT US</a>
+        <a href="https://nakisuites.com/" target="_blank">OUR PROPERTIES</a>
+        <a href="#" onclick="showPage('contact')">CONTACT US</a>
+      </div>
+      <div class="footer-col">
+        <h5>Our Properties</h5>
+        <a href="https://nakisuites.com/" target="_blank">NAKI SUITES @ SILVERTOWN</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-bottom-logo">NAKI HOSPITALITY</span>
+      <span class="footer-bottom-sub">A NAKI GROUP COMPANY — Copyright © 2024.</span>
+    </div>
+  </footer>
+</div>
+
+<!-- ✅ JavaScript ដាច់ដោយឡែក -->
+<script src="assets/js/main.js"></script>
+</body>
+</html>
+
+<!-- POP UP Chat ///////////////////////////////// -->
+
+<div class="chat-container">
+    <div class="chat-options" id="chatOptions">
+        <a href="https://instagram.com/yourpage" target="_blank" class="chat-icon insta" title="Telegram">
+            <img src="assets/images/telegram.png" alt="TEL">
+        </a>
+        <a href="https://m.me/yourpage" target="_blank" class="chat-icon messenger" title="Messenger">
+            <img src="assets/images/messager.png" alt="MESSENGER">
+        </a>
+        <a href="https://wa.me/yourphonenumber" target="_blank" class="chat-icon whatsapp" title="WhatsApp">
+            <img src="assets/images/whatapp.png" alt="WA">
+        </a>
+    </div>
+    
+    <button class="chat-main-btn" onclick="toggleChat()" id="chatMainBtn">
+    <span class="icon-open">
+        <img src="assets/images/mainlogo.png" alt="chat">
+    </span>
+    <span class="icon-close">×</span>
+</button>
+</div>
